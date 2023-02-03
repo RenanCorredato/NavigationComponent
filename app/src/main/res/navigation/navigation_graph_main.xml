@@ -8,13 +8,13 @@
     <fragment
         android:id="@+id/fragmentHome"
         android:name="com.renancorredato.appcomnavigation.HomeFragment"
-        android:label="FragmentHome"
+        android:label="homeFragment"
         tools:layout="@layout/fragment_home">
         <action
-            android:id="@+id/action_fragmentHome_to_registerFragment"
+            android:id="@+id/action_homeFragment_to_registerFragment"
             app:destination="@id/registerFragment" />
         <action
-            android:id="@+id/action_fragmentHome_to_loginFragment"
+            android:id="@+id/action_homeFragment_to_loginFragment"
             app:destination="@id/loginFragment" />
     </fragment>
     <fragment
