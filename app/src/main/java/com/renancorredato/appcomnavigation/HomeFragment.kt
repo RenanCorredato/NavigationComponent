@@ -26,17 +26,9 @@ class HomeFragment : Fragment() {
         binding.btnSignIn.setOnClickListener {
             signIn()
         }
-
-        binding.btnRegister.setOnClickListener {
-            register()
-        }
-    }
-
-    private fun register() {
-        findNavController().navigate(R.id.action_homeFragment_to_registerFragment)
     }
 
     private fun signIn() {
-        findNavController().navigate(R.id.action_homeFragment_to_loginFragment)
+        findNavController().navigate(R.id.action_fragmentHome_to_navigation_graph_auth2)
     }
 }

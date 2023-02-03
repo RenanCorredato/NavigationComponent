@@ -24,13 +24,22 @@ class LoginFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        binding.btnBack.setOnClickListener {
-            goBack()
+        binding.btnRegister.setOnClickListener {
+            register()
         }
+
+//        binding.btnBack.setOnClickListener {
+//            goBack()
+//        }
     }
 
-    private fun goBack() {
-        findNavController().popBackStack()
+
+    private fun register() {
+       findNavController().navigate(R.id.action_loginFragment_to_registerFragment)
     }
+
+//    private fun goBack() {
+//        findNavController().popBackStack()
+//    }
 
 }
