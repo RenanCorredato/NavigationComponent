@@ -5,8 +5,6 @@
     android:id="@+id/navigation_graph_main"
     app:startDestination="@id/fragmentHome">
 
-    <include app:graph ="@navigation/navigation_graph_auth"/>
-
     <fragment
         android:id="@+id/fragmentHome"
         android:name="com.renancorredato.appcomnavigation.HomeFragment"
@@ -16,12 +14,24 @@
             android:id="@+id/action_fragmentHome_to_panelFragment"
             app:destination="@id/panelFragment" />
         <action
-            android:id="@+id/action_fragmentHome_to_navigation_graph_auth2"
-            app:destination="@id/navigation_graph_auth" />
+            android:id="@+id/action_fragmentHome_to_loginFragment"
+            app:destination="@id/loginFragment" />
     </fragment>
+
     <fragment
         android:id="@+id/panelFragment"
         android:name="com.renancorredato.appcomnavigation.PanelFragment"
         android:label="PanelFragment"
         tools:layout="@layout/fragment_panel" />
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.renancorredato.appcomnavigation.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_loginFragment_to_panelFragment"
+            app:popUpTo="@id/fragmentHome"
+            app:destination="@id/panelFragment" />
+    </fragment>
+
 </navigation>
